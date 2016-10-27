@@ -1,0 +1,14 @@
+<nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Warcraft Log Search Profile (BETA)</a>
+        </div>
+    </div>
+    <div class="container">
+        <form class="navbar-form navbar-right search-form" role="search">
+            <input type="text" name="username" class="form-control" placeholder="Enter A Wow Pseudo..." [(ngModel)]="wowUser.name" (keyup)="searchUser()">
+            <input type="text" name="serveurname" class="form-control" placeholder="Enter A Wow server name...(Garona)" [(ngModel)]="wowUser.serverName" (keyup)="searchUser()">
+            <input type="text" name="serverRegion" class="form-control" placeholder="Enter A Wow serverRegio ...(EU)" [(ngModel)]="wowUser.serverRegion" (keyup)="searchUser()">
+        </form>
+    </div>
+</nav>
