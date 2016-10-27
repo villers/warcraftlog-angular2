@@ -31,12 +31,12 @@
                 <tr *ngFor="let character of wowUser.characterParse">
                     <td>{{character.name}}</td>
                     <td>{{character.difficulty | dificulty}}</td>
-                    <td>{{character.specs[1].class}} / {{character.specs[1].spec}}</td>
-                    <td>{{character.specs[1].data[0].persecondamount}}</td>
-                    <td>{{character.specs[1].data[0].ilvl}}</td>
-                    <td>{{character.specs[1].data[0].duration | mstotime}}</td>
-                    <td>{{character.specs[1].data[0].start_time | date}}</td>
-                    <td><a href="https://www.warcraftlogs.com/reports/{{character.specs[1].data[0].start_time}}/#fight={{character.specs[1].data[0].report_fight}}">Report</a></td>
+                    <td>{{character.specs[0].class}} / {{character.specs[0].spec}}</td>
+                    <td>{{character.specs[0].data[0].persecondamount}}</td>
+                    <td>{{character.specs[0].data[0].ilvl}}</td>
+                    <td>{{character.specs[0].data[0].duration | mstotime}}</td>
+                    <td>{{character.specs[0].data[0].start_time | date}}</td>
+                    <td><a href="https://www.warcraftlogs.com/reports/{{character.specs[0].data[0].start_time}}/#fight={{character.specs[0].data[0].report_fight}}">Report</a></td>
                 </tr>
             </tbody>
         </table>

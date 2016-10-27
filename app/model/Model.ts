@@ -1,6 +1,5 @@
 import { List } from 'linqts/dist/linq';
 
-
 export class User {
     constructor() {
         this.name = '';
@@ -38,7 +37,13 @@ export class CharacterParse {
     size: number;
     kill: number;
     name: string;
-    specs: any[];
+    specs: Specs[];
     variable: boolean;
     partition: number;
 }
+
+export class Specs {
+    combined: boolean;
+    data: any[];
+}
+
