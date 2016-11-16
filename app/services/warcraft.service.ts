@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
-import {CharacterParse, Specs} from "../model/Model";
+import {CharacterParse, Specs, Data} from "../model/Model";
 import { List } from 'linqts/dist/linq';
 
 @Injectable()
@@ -24,7 +24,8 @@ export class WarcraftService {
                 return result
                     .OrderBy((i: CharacterParse) => i.name)
                     .ThenBy((i: CharacterParse) => {
-                        return i.specs.filter((i: Specs) => !i.combined)[0].data[0].start_time;
+                        return new List<Data>(new List<Specs>(i.specs).First((i: Specs)=>!i.combined).data).First().start_time;
+                        //return i.specs.filter((i: Specs) => !i.combined)[0].data[0].start_time;
                     })
                     .ToArray();
 

@@ -44,6 +44,10 @@ export class CharacterParse {
 
 export class Specs {
     combined: boolean;
-    data: any[];
+    data: Data[];
+}
+
+export class Data {
+    start_time: string;
 }
 
